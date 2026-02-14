@@ -1,0 +1,7 @@
+.model CONST_FALSE
+.outputs OUT
+
+.names OUT
+0
+
+.end

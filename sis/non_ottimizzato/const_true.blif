@@ -1,0 +1,7 @@
+.model CONST_TRUE
+.outputs OUT
+
+.names OUT
+1
+
+.end

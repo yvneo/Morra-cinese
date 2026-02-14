@@ -1,0 +1,37 @@
+.model FSM
+.inputs INIZIA END
+.outputs SETUP_CABLE
+.latch    INIZIA LatchOut_v2   0
+.latch    [2] LatchOut_v3   1
+.start_kiss
+.i 2
+.o 1
+.p 7
+.s 3
+.r RESET
+0- RESET RESET 1
+1- RESET SETUP 1
+1- SETUP SETUP 1
+0- SETUP GAME 0
+00 GAME GAME 0
+1- GAME SETUP 1
+01 GAME RESET 1
+.end_kiss
+.latch_order LatchOut_v2 LatchOut_v3
+.code RESET 01
+.code SETUP 10
+.code GAME 00
+.names INIZIA END LatchOut_v2 LatchOut_v3 [2]
+0--1 1
+010- 1
+.names INIZIA [2] SETUP_CABLE
+1- 1
+-1 1
+.exdc 
+.inputs INIZIA END LatchOut_v2 LatchOut_v3
+.outputs [2] SETUP_CABLE
+.names LatchOut_v2 LatchOut_v3 [2]
+11 1
+.names LatchOut_v2 LatchOut_v3 SETUP_CABLE
+11 1
+.end

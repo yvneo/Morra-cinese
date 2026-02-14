@@ -1,0 +1,14 @@
+# Questo sommatore utilizza solo 5 bit, eventuale overflow viene ignorato
+
+.model SUM5
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0
+.outputs OUT4 OUT3 OUT2 OUT1 OUT0
+
+.subckt SUM A=A0 B=B0 CIN=0 OUT=OUT0 COUT=COUT0
+.subckt SUM A=A1 B=B1 CIN=COUT0 OUT=OUT1 COUT=COUT1
+.subckt SUM A=A2 B=B2 CIN=COUT1 OUT=OUT2 COUT=COUT2
+.subckt SUM A=A3 B=B3 CIN=COUT2 OUT=OUT3 COUT=COUT3
+.subckt SUM A=A4 B=B4 CIN=COUT3 OUT=OUT4 COUT=COUT4
+
+.search sum.blif
+.end

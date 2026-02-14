@@ -1,0 +1,17 @@
+.model DECODER2
+.inputs S1 S0
+.outputs OUT3 OUT2 OUT1 OUT0
+
+.names S1 S0 OUT0
+00 1
+
+.names S1 S0 OUT1
+01 1
+
+.names S1 S0 OUT2
+10 1
+
+.names S1 S0 OUT3
+11 1
+
+.end

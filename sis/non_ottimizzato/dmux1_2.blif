@@ -1,0 +1,14 @@
+.model DEMUX1_2
+.inputs S1 S0 IN
+.outputs OUT3 OUT2 OUT1 OUT0
+
+.names S1 S0 IN OUT0
+001 1
+.names S1 S0 IN OUT1
+011 1
+.names S1 S0 IN OUT2
+101 1
+.names S1 S0 IN OUT3
+111 1
+
+.end

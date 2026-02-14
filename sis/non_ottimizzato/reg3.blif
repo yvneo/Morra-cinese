@@ -1,0 +1,11 @@
+.model REG3
+.inputs A2 A1 A0
+.outputs OUT2 OUT1 OUT0
+
+.subckt REG A=A2 O=OUT2
+.subckt REG A=A1 O=OUT1
+.subckt REG A=A0 O=OUT0
+
+.search reg.blif
+
+.end

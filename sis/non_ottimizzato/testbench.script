@@ -1,0 +1,11 @@
+read_blif morra_cinese.blif
+# Test 1: Configurazione iniziale (6 manche massime)
+sim 1 0 0 1 0     # SETUP
+sim 0 0 1 0 1     # SASSO vs SASSO        Match: 0 - 0      Punteggio: 0 - 0      Turno: 1
+sim 0 1 1 1 0     # FORBICE vs CARTA      Match: 1 - 0      Punteggio: 1 - 0      Turno: 2
+sim 0 0 1 1 0     # SASSO vs CARTA        Match: 0 - 1      Punteggio: 1 - 1      Turno: 2
+sim 0 1 1 0 1     # FORBICE vs SASSO      Match: 0 - 1      Punteggio: 1 - 2      Turno: 4
+sim 0 0 0 0 0     # NULL vs NULL          Match: 0 - 0      Punteggio: 1 - 2      Turno: 4
+sim 0 0 1 0 1     # SASSO vs SASSO        Match: 0 - 0      Punteggio: 1 - 2      Turno: 4
+sim 0 0 1 1 0     # SASSO vs CARTA        Match: 0 - 1      Punteggio: 1 - 3      Turno: 5
+sim 0 1 0 0 1     # CARTA vs SASSO        Match: 1 - 0      Punteggio: 2 - 3      Turno: 6

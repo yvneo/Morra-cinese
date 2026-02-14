@@ -1,0 +1,28 @@
+.model FSM
+.inputs INIZIA END
+.outputs SETUP_CABLE
+
+.start_kiss
+.i 2					# numero di segnali di ingresso
+.o 1					# numero di segnali di uscita
+.s 3					# numero di stati
+.p 7					# numero di transizioni
+.r RESET			# stato di reset
+
+# Tabella delle transizioni
+0- RESET RESET 1
+1- RESET SETUP 1
+1- SETUP SETUP 1
+0- SETUP GAME 0
+00 GAME GAME 0
+1- GAME SETUP 1
+01 GAME RESET 1
+
+.end_kiss
+
+# Codifica degli stati
+.code RESET 00
+.code SETUP 01
+.code GAME 10
+
+.end

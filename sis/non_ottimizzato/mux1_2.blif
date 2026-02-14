@@ -1,0 +1,11 @@
+.model MUX1_2
+.inputs S1 S0 A B C D 
+.outputs OUT
+
+.names S1 S0 A B C D OUT
+001--- 1
+01-1-- 1
+10--1- 1
+11---1 1
+
+.end

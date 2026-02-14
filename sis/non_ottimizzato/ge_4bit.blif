@@ -1,0 +1,15 @@
+.model GE4BIT
+.inputs A3 A2 A1 A0 B3 B2 B1 B0
+.outputs AgeB
+
+.subckt GT4BIT A3=A3 A2=A2 A1=A1 A0=A0 B3=B3 B2=B2 B1=B1 B0=B0 AgtB=GT
+.subckt EQUAL5 A4=0 A3=A3 A2=A2 A1=A1 A0=A0 B4=0 B3=B3 B2=B2 B1=B1 B0=B0 OUT=EQ
+
+
+.names GT EQ AgeB
+00 0
+
+.search gt_4bit.blif
+.search equal_5bit.blif
+
+.end

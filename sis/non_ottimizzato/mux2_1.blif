@@ -1,0 +1,8 @@
+.model MUX2_1
+.inputs S A1 A0 B1 B0
+.outputs OUT1 OUT0
+
+.subckt MUX1_1 S=S A=A1 B=B1 OUT=OUT1
+.subckt MUX1_1 S=S A=A0 B=B0 OUT=OUT0
+
+.end

@@ -1,0 +1,17 @@
+.model GT4BIT
+.inputs A3 A2 A1 A0 B3 B2 B1 B0
+.outputs AgtB
+.subckt XOR A=A3 B=B3 OUT=X3
+.subckt XOR A=A2 B=B2 OUT=X2
+.subckt XOR A=A1 B=B1 OUT=X1
+.subckt XOR A=A0 B=B0 OUT=X0
+
+.names A3 A2 A1 A0 X3 X2 X1 X0 AgtB
+1---1--- 1
+-1--01-- 1
+--1-001- 1
+---10001 1
+
+.search xor.blif
+
+.end

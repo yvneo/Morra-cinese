@@ -1,0 +1,15 @@
+.model EQUAL5
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0
+.outputs OUT
+
+.subckt xnor A=A4 B=B4 OUT=TMP4
+.subckt xnor A=A3 B=B3 OUT=TMP3
+.subckt xnor A=A2 B=B2 OUT=TMP2
+.subckt xnor A=A1 B=B1 OUT=TMP1
+.subckt xnor A=A0 B=B0 OUT=TMP0
+
+.names TMP4 TMP3 TMP2 TMP1 TMP0 OUT
+11111 1
+
+.search xnor.blif
+.end

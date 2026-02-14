@@ -1,0 +1,9 @@
+.model OR3
+.inputs A B C
+.outputs OUT
+
+.subckt OR A=A B=B OUT=TMP
+.subckt OR A=C B=TMP OUT=OUT
+
+.search or.blif
+.end

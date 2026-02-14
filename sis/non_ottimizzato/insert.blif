@@ -1,0 +1,8 @@
+.model INSERT
+.inputs IN
+.outputs OUT
+
+.names IN OUT
+1 1
+
+.end
